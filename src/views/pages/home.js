@@ -12,7 +12,7 @@ function Home() {
             <Container>
                <Grid container>
                    {response.map((item,i) =>{
-                   return <Grid key={i} item xs={4}>
+                   return <Grid key={i} item md={4}>
                         <Product product={item} />
                    </Grid>
                    })}
