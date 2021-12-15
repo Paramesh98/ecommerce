@@ -6,7 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Button, ButtonGroup, Container, Grid } from '@mui/material';
+import { Button, ButtonGroup, Container, Grid, Typography } from '@mui/material';
 import {response} from '../../config/data.json'
 import { useDispatch, useSelector } from 'react-redux';
 import { cartState, decrementCart, incrementCart, remove } from '../../redux/cartSlice';
@@ -31,6 +31,17 @@ export default function Cart() {
   const removeFromCart = (data) =>{
     dispatch(remove(data))
   }
+
+  if(cart.length === 0){
+    return  <Typography
+            variant="h5"
+            component="div"
+            sx={{mt:3}}
+          >
+         No Item in your cart
+          </Typography>
+  }
+
   return (
       <Container>
 
@@ -57,7 +68,7 @@ export default function Cart() {
                 {i+1}
               </TableCell>
               <TableCell align="right">{row.Title}</TableCell>
-              <TableCell align="right">{row.price}</TableCell>
+              <TableCell align="right">$ {row.price}</TableCell>
               <TableCell align="right">
                 <ButtonGroup size="small" aria-label="small outlined button group">
                 <Button onClick={() => dispatch(decrementCart(row))}>-</Button>

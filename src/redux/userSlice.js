@@ -9,7 +9,6 @@ const initialState ={
     error:null
 }
 
-// const user ={userId:"123456789",password:"123456789"}
 
 const userData ={
     _id:"123456789",
@@ -26,7 +25,7 @@ export const getUserDetails = createAsyncThunk("user/fetchUser",async(user,{disp
     // }
     // console.log("token", res.data.token)
     // return userData
-    console.log("clad")
+  
     return new Promise((resolve) => resolve(userData))
 })
 
