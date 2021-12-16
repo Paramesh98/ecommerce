@@ -5,7 +5,7 @@ import About from '../pages/about'
 import Cart from '../pages/cart'
 import Home from '../pages/home'
 import SignIn from '../pages/login'
-import ProductView from '../pages/productView'
+import ProductView from '../pages/productOverview'
 import PrivateRoute from './privateRoute'
 import PublicRoute from './publicRoute'
 

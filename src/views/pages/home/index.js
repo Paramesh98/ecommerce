@@ -1,9 +1,7 @@
 import { Box, Container, Grid } from '@mui/material'
 import React from 'react'
-import Header from '../components/Header'
-import Product from '../components/Products'
-import {response} from '../../config/data.json'
-import ProductView from './productView'
+import Product from '../../components/Products'
+import {response} from '../../../config/data.json'
 
 function Home() {
     return (
