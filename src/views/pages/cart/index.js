@@ -7,9 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Button, ButtonGroup, Container, Grid, Typography } from '@mui/material';
-import {response} from '../../config/data.json'
 import { useDispatch, useSelector } from 'react-redux';
-import { cartState, decrementCart, incrementCart, remove } from '../../redux/cartSlice';
+import { cartState, decrementCart, incrementCart, remove } from '../../../redux/cartSlice';
 
 
 function createData(name, calories, fat, carbs, protein) {

@@ -8,8 +8,7 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { getUserDetails, userState } from '../../redux/userSlice';
+import { getUserDetails, userState } from '../../../redux/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import {useNavigate} from 'react-router-dom'
 
@@ -20,7 +19,6 @@ export default function SignIn() {
   const dispatch = useDispatch()
   const userData = useSelector(userState)
   const navigate = useNavigate()
-  console.log("userdata",userData)
   const handleSubmit = (event) => {
     event.preventDefault();
     let userData ={
@@ -66,6 +64,7 @@ export default function SignIn() {
               label="User Id"
               name="email"
               autoFocus
+            
               value={user.id}
               onChange={(e) =>setUser({...user,id:e.target.value}) }
             />
